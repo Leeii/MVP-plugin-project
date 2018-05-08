@@ -1,0 +1,9 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import javax.inject.Inject;
+
+#parse("File Header.java")
+public class ${NAME} implements CLASS_ORIGINContract.ICLASS_ORIGINPresenter {
+    @Inject
+    CLASS_ORIGINContract.ICLASS_ORIGINView mView;
+}

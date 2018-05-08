@@ -1,0 +1,30 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import android.os.Bundle;
+
+import PROJECT_PACKAGE.R;
+import PROJECT_PACKAGE.base.DaggerFragment;
+import PROJECT_PACKAGE.dagger.fragment.FragmentComponent;
+
+import javax.inject.Inject;
+
+#parse("File Header.java")
+public class ${NAME} extends DaggerFragment implements CLASS_ORIGINContract.ICLASS_ORIGINView {
+    @Inject
+    CLASS_ORIGINContract.ICLASS_ORIGINPresenter mPresenter;
+
+    @Override
+    protected void inject(FragmentComponent fragmentComponent) {
+        fragmentComponent.inject(this);
+    }
+
+    @Override
+    protected int getLayoutResources() {
+        return R.layout.fragment_ALL_LOWER_NAME;
+    }
+
+    @Override
+    protected void trySetupData(Bundle savedInstanceState) {
+
+    }
+}

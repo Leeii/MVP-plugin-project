@@ -1,0 +1,16 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import com.leeiidesu.lib.base.mvp.BasePresenter;
+import com.leeiidesu.lib.base.mvp.BaseView;
+
+
+#parse("File Header.java")
+public interface ${NAME} {
+    interface ICLASS_ORIGINView extends BaseView {
+        
+    }
+
+    interface ICLASS_ORIGINPresenter extends BasePresenter {
+
+    }
+}
